@@ -1,4 +1,11 @@
 @media (min-width: 769px) {
+    #container{
+        background-image: url('../images/background-desktop.png');
+        background-size: cover;
+        background-position: start;
+        background-repeat: no-repeat;
+    }
+
     header{
         .navbar{
             .btn-mobile{ display: none; }
@@ -22,6 +29,28 @@
             justify-content: center;
             flex-wrap: wrap;
             gap: 24px;
+        }
+    }
+}
+
+@media (min-width: 1200px) {
+    #about{
+        margin: 4%;
+        justify-content: center;
+
+        .about-content{
+            flex-direction: row;
+            align-items: center;
+            gap: 48px;
+        }
+        .about-image{
+            order: 1;
+        }
+        .about-info:first-child{
+            order: 2;
+        }
+        .about-info:last-child{
+            order: 3;
         }
     }
 }
