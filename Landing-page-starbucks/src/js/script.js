@@ -7,3 +7,13 @@ btnMobile.addEventListener('click', () => {
     icon.classList.toggle('fa-bars');
     icon.classList.toggle('fa-times');
 });
+
+window.addEventListener('scroll', () => {
+    const header = document.querySelector('header');
+
+    if (window.scrollY > 0) {
+        header.style.boxShadow = '0 4px 10px rgb(0, 0, 0, .1)';
+    }else{
+        header.style.boxShadow = 'none';
+    }
+})
