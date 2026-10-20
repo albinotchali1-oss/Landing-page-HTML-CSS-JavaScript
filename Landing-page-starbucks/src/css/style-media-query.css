@@ -31,6 +31,24 @@
             gap: 24px;
         }
     }
+
+    #products{
+        min-height: 100vh;
+        gap: 8rem;
+
+        .products-cards{
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 24px;
+
+            .products-card{
+                img{
+                    width: 250px;
+                }
+            }
+        }
+    }
 }
 
 @media (min-width: 1200px) {
