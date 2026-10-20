@@ -3,13 +3,18 @@
 @import url('./navbar.css');
 @import url('./style-media-query.css');
 
-
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
+
+#container{
+    background-image: url('../images/background-mobile.png');
+    background-size: contain;
+}
+
 a.btn{
     text-decoration: none;
 }
@@ -26,7 +31,7 @@ a.btn{
 .btn-mobile{
     font-size: 1.5rem;
 }
-.btn-deafult{
+.btn-default{
     background-color: var(--color-primary-1);
     color: var(--color-neutral-0);
 
@@ -34,4 +39,51 @@ a.btn{
         background-color: var(--color-primary-2);
     }
 }
+.btn-outlined{
+    background-color: transparent;
+    color: var(--color-primary-1);
+    border: 2px solid var(--color-primary-1);
 
+    &:hover{
+        color: var(--color-neutral-0);
+        background-color: var(--color-primary-1);
+    }
+}
+
+#home{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    min-height: calc(100vh - 96px);
+    padding: 32px 4%;
+    padding-top: clamp(2rem, 5vw, 4rem);
+
+    .home-image{
+        width: clamp(300px, 50%, 400px);
+    }
+    .home-title{
+        color: var(--color-neutral-8);
+        text-align: center;
+        font-size: clamp(3rem, 5vw, 4.3rem);
+        text-transform: uppercase;
+        line-height: 1.2;
+        max-width: 700px;
+
+        span{
+            color: var(--color-primary-1);
+        }
+    }
+    .home-description{
+        color: var(--color-neutral-9);
+        text-align: center;
+        font-weight: 500;
+        font-size: 1rem;
+        max-width: 600px;
+    }
+    .home-actions{
+        display: flex;
+        gap: 12px;
+        margin-top: 12px;
+    }
+}
