@@ -1,0 +1,56 @@
+@import url('./variables.css');
+header{
+    background-color: var(--color-neutral-1);
+    padding: 12px 4%;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+
+    .navbar{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .logo{
+            width: 150px;
+        }
+        ul{
+            display: none;
+            flex-direction: column;
+            list-style-type: none;
+
+            width: 100%;
+            position: absolute;
+            top: 80px;
+            left: 0;
+            background-color: var(--color-neutral-1);
+            padding: 1rem;
+
+            &.show{
+                display: flex;
+            }
+
+            li{
+                text-align: center;
+                a{
+                    text-decoration: none;   
+                    color: var(--color-neutral-8);
+                    font-size: 1rem;
+                    font-weight: 500;
+                    transition: all .3s ease;
+
+                    &:hover{
+                        color: var(--color-primary-1);
+                        border-bottom: 2px solid var(--color-primary-1);
+                    }
+                }
+
+
+            }
+        }
+        .btn-deafult{
+            display: none;
+        }
+    }
+}
+
